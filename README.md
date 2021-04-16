@@ -4,7 +4,7 @@ Vulkan Renderer accompanying my poster presentation at i3D Symposium 2021:
 
 Instructions for Windows, Visual Studio 2019 and RTX Nvidia Graphics Card:
 
-Step 1: Install Vulkan SDK 1.2.142
+Step 1: Install Vulkan SDK 1.2.141.2
 https://vulkan.lunarg.com/
 
 Step 2: Install Nvidia Beta Drivers Version 451.74 (July 20th, 2020)
