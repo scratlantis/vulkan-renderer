@@ -11,7 +11,7 @@ Step 2: Install Nvidia Beta Drivers Version 451.74 (July 20th, 2020)
 https://developer.nvidia.com/vulkan-driver
 
 Step 3: In Visual Studio: Propties (Alt+Enter) -> C/C++ -> General -> Additional Include Directories:
-Change Path from "C:\VulkanSDK\1.2.141.2\Include" -> <your path to vulkan sdk>\VulkanSDK\1.2.141.2\Include
+Change Path from "C:\VulkanSDK\1.2.141.2\Include" -> "your path to vulkan sdk"\VulkanSDK\1.2.141.2\Include
 
 
 More detailed instructions to come...
