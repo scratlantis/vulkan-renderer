@@ -7,7 +7,8 @@ Instructions for Windows, Visual Studio 2019 and RTX Nvidia Graphics Card:
 Step 1: Install Vulkan SDK 1.2.141.2
 https://vulkan.lunarg.com/
 
-Step 2: Install Nvidia Beta Drivers Version 451.74 (July 20th, 2020)
+Step 2: Install Nvidia Beta Drivers Version 457.33. The new beta drivers will not
+work, as we currently rely on the kronos provisional extensions.
 https://developer.nvidia.com/vulkan-driver
 
 Step 3: In Visual Studio: Propties (Alt+Enter) -> C/C++ -> General -> Additional Include Directories:
