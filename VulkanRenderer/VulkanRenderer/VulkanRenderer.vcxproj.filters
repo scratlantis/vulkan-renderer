@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\shaders">
+      <UniqueIdentifier>{75b9c2b2-0d5e-4eb0-9917-965a5a9473ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\External">
+      <UniqueIdentifier>{b844643e-69a9-4be4-8638-dae38669a73e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\shader.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_geom_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_geom_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_shading_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_shading_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_depth_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_depth_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_vb_shading_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_vb_shading_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_vb_geom_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_vb_geom_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_decal_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_deferred_decal_pass.glsl.vert">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\brdf.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\material_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\decal_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\ubo_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shading_data_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\point_light_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccelerationStructureBuilder.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Decal.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DecalData.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DecalLoader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DeferredRenderer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthImage.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRenderer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GBuffer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialLoader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshLoader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PerFrameConstants.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLightData.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLightLoader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFeatureFlags.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureImage.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VbRenderer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VisibilityBuffer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanContext.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanUtils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Headerdateien\External</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="AccelerationStructureBuilder.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="VulkanUtils.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="DecalLoader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthImage.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GBuffer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialLoader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureImage.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshLoader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLightLoader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="VisibilityBuffer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferredRenderer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardRenderer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="VbRenderer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
