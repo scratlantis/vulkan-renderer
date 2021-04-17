@@ -21,12 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader\shader.frag">
-      <Filter>Quelldateien\shaders</Filter>
-    </None>
-    <None Include="shader\shader.vert">
-      <Filter>Quelldateien\shaders</Filter>
-    </None>
     <None Include="shader\shader_deferred_geom_pass.glsl.frag">
       <Filter>Quelldateien\shaders</Filter>
     </None>
@@ -37,12 +31,6 @@
       <Filter>Quelldateien\shaders</Filter>
     </None>
     <None Include="shader\shader_deferred_shading_pass.glsl.vert">
-      <Filter>Quelldateien\shaders</Filter>
-    </None>
-    <None Include="shader\shader_depth_pass.glsl.frag">
-      <Filter>Quelldateien\shaders</Filter>
-    </None>
-    <None Include="shader\shader_depth_pass.glsl.vert">
       <Filter>Quelldateien\shaders</Filter>
     </None>
     <None Include="shader\shader_vb_shading_pass.glsl.frag">
@@ -79,6 +67,12 @@
       <Filter>Quelldateien\shaders</Filter>
     </None>
     <None Include="shader\point_light_def.glsl">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_forward_depth_pass.glsl.frag">
+      <Filter>Quelldateien\shaders</Filter>
+    </None>
+    <None Include="shader\shader_forward_depth_pass.glsl.vert">
       <Filter>Quelldateien\shaders</Filter>
     </None>
   </ItemGroup>

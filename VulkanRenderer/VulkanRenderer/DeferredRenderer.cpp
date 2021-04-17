@@ -423,7 +423,8 @@ void DeferredRenderer::createDescriptorSetLayoutDeferredShading() {
 
 void DeferredRenderer::compileShader() {
 
-    std::string cmdShaderCompile = "C:\\VulkanSDK\\1.2.141.2\\Bin\\glslangValidator.exe";
+    std::string cmdShaderCompile = VULKAN_PATH;
+    cmdShaderCompile.append("Bin\\glslangValidator.exe");
 
     // Geometry Pass
     std::string cmdDeferredGeometryVertexShaderCompile = cmdShaderCompile

@@ -158,7 +158,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.141.2\Lib;C:\GLFW\glfw-3.3.2.bin.WIN64\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.141.2\Lib;$(SolutionDir)/External/GLFW/glfw-3.3.2.bin.WIN64/lib-vc2019</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;vulkan-1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -184,16 +184,14 @@
     <None Include="shader\decal_def.glsl" />
     <None Include="shader\material_def.glsl" />
     <None Include="shader\point_light_def.glsl" />
-    <None Include="shader\shader.frag" />
-    <None Include="shader\shader.vert" />
     <None Include="shader\shader_deferred_decal_pass.glsl.frag" />
     <None Include="shader\shader_deferred_decal_pass.glsl.vert" />
     <None Include="shader\shader_deferred_geom_pass.glsl.frag" />
     <None Include="shader\shader_deferred_geom_pass.glsl.vert" />
     <None Include="shader\shader_deferred_shading_pass.glsl.frag" />
     <None Include="shader\shader_deferred_shading_pass.glsl.vert" />
-    <None Include="shader\shader_depth_pass.glsl.frag" />
-    <None Include="shader\shader_depth_pass.glsl.vert" />
+    <None Include="shader\shader_forward_depth_pass.glsl.frag" />
+    <None Include="shader\shader_forward_depth_pass.glsl.vert" />
     <None Include="shader\shader_vb_shading_pass.glsl.frag" />
     <None Include="shader\shader_vb_shading_pass.glsl.vert" />
     <None Include="shader\shader_vb_geom_pass.glsl.frag" />

@@ -301,7 +301,8 @@ void VbRenderer::createDescriptorSetLayoutVbShading() {
 
 void VbRenderer::compileShader() {
 
-    std::string cmdShaderCompile = "C:\\VulkanSDK\\1.2.141.2\\Bin\\glslangValidator.exe";
+    std::string cmdShaderCompile = VULKAN_PATH;
+    cmdShaderCompile.append("Bin\\glslangValidator.exe");
 
 
     std::string cmdVbGeometryVertexShaderCompile = cmdShaderCompile

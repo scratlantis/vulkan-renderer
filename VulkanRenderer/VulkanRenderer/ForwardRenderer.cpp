@@ -219,10 +219,11 @@ void ForwardRenderer::createDescriptorSetLayout() {
 
 void ForwardRenderer::compileShader() {
 
-    std::string cmdShaderCompile = "C:\\VulkanSDK\\1.2.141.2\\Bin\\glslangValidator.exe";
+    std::string cmdShaderCompile = VULKAN_PATH;
+    cmdShaderCompile.append("Bin\\glslangValidator.exe");
 
     std::string cmdVertexShaderCompile = cmdShaderCompile
-        + " -V -o shader/vert.spv shader/shader.vert";
+        + " -V -o shader/shader_forward_shading_pass_vert.spv shader/shader_forward_shading_pass.glsl.vert";
     //+ " -V -o shader/vert.spv shader/shader_deferred_shading_pass.glsl.vert";
 
     std::string cmdFragmentShaderCompile = cmdShaderCompile;
@@ -232,16 +233,16 @@ void ForwardRenderer::compileShader() {
         .append(" -DDECALS=").append(std::to_string(scene->m_decalCount + 1))
         .append(" -DPOINT_LIGHTS=").append(std::to_string(scene->m_pointLightCount))
         .append(createShaderFeatureFlagsComlileArguments(context->shaderFeatureFlags))
-        .append(" -V -o shader/frag.spv shader/shader.frag");
+        .append(" -V -o shader/shader_forward_shading_pass_frag.spv shader/shader_forward_shading_pass.glsl.frag");
     //.append(" -V -o shader/frag.spv shader/shader_deferred_shading_pass.glsl.frag");
 
     std::string cmdDepthPassVertexShaderCompile = cmdShaderCompile
-        + " -V -o shader/shader_depth_pass_vert.spv shader/shader_depth_pass.glsl.vert";
+        + " -V -o shader/shader_forward_depth_pass_vert.spv shader/shader_forward_depth_pass.glsl.vert";
     std::string cmdDepthPassFragmentShaderCompile = cmdShaderCompile;
     cmdDepthPassFragmentShaderCompile
         .append(" -DTEXTURES=").append(std::to_string(scene->m_textureCount))
         .append(" -DMATERIALS=").append(std::to_string(scene->m_materialCount))
-        .append(" -V -o shader/shader_depth_pass_frag.spv shader/shader_depth_pass.glsl.frag");
+        .append(" -V -o shader/shader_forward_depth_pass_frag.spv shader/shader_forward_depth_pass.glsl.frag");
 
     std::cout << cmdVertexShaderCompile << std::endl;
     std::cout << cmdFragmentShaderCompile << std::endl;
@@ -254,11 +255,11 @@ void ForwardRenderer::compileShader() {
     system(cmdDepthPassVertexShaderCompile.c_str());
     system(cmdDepthPassFragmentShaderCompile.c_str());
 
-    auto shaderCodeVert = readFile("shader/vert.spv");
-    auto shaderCodeFrag = readFile("shader/frag.spv");
+    auto shaderCodeVert = readFile("shader/shader_forward_shading_pass_vert.spv");
+    auto shaderCodeFrag = readFile("shader/shader_forward_shading_pass_frag.spv");
 
-    auto shaderCodeDepthPassVert = readFile("shader/shader_depth_pass_vert.spv");
-    auto shaderCodeDepthPassFrag = readFile("shader/shader_depth_pass_frag.spv");
+    auto shaderCodeDepthPassVert = readFile("shader/shader_forward_depth_pass_vert.spv");
+    auto shaderCodeDepthPassFrag = readFile("shader/shader_forward_depth_pass_frag.spv");
 
     createShaderModule(context->m_device, shaderCodeVert, &shaderModuleVert);
     createShaderModule(context->m_device, shaderCodeFrag, &shaderModuleFrag);

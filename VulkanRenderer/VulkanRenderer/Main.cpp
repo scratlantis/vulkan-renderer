@@ -128,7 +128,7 @@ DeferredRenderer* deferredRenderer;
 ForwardRenderer* forwardRenderer;
 VbRenderer* vbRenderer;
 VkSampler colorSampler;
-uint32_t deviceIndex = 0;
+uint32_t deviceIndex = DEVICE_INDEX;
 bool tab_Pressed = false;
 Camera cam;
 Scene* scene;
@@ -889,6 +889,8 @@ void initialiseVulkanContext()
     physicalDevices = getAllPhysicalDevices();
     context.m_physicalDevice = physicalDevices[deviceIndex];
 
+    
+
     createGlfwWindowSurface();
     getDeviceFeatures();
 #ifdef _DEBUG
@@ -897,6 +899,9 @@ void initialiseVulkanContext()
     printInstanceExtensions();
     printStatsOfAllPhysicalDevices();
 #endif // _DEBUG
+
+    printStatsOfAllPhysicalDevices();
+
     createLogicalDevice();
     createQueue();
     checkSurfaceSupport();
@@ -1074,10 +1079,6 @@ void startVulkan() {
     initialiseVulkanContext();
     scene = new Scene(&context, sceneInfo, &meshLoader, &materialLoader, &decalLoader, &pointLightLoader, &asBuilder);
     load();
-    
-
-
-
 }
 
 auto gameStartTime = std::chrono::high_resolution_clock::now();
@@ -1527,12 +1528,38 @@ void shutdownGlfw() {
 int main()
 {
     context.shaderFeatureFlags = 0;
-    //sceneInfo = sceneInfos[0]; // Emerald square
-    //sceneInfo = sceneInfos[2]; // Bistro
+    //sceneInfo = sceneInfos[0]; // Emerald square (Currently not in repo)
+    //sceneInfo = sceneInfos[2]; // Bistro (Currently not in repo)
     sceneInfo = sceneInfos[1]; // Suntemple
-    renderMode = DEFERRED;
+    renderMode = FORWARD;
     context.shaderFeatureFlags = ENABLE_RAY_QUERY_DECALS | ENABLE_RAY_QUERY_LIGHTS | ENABLE_PRIMARY_POINT_LIGHT;
 
+
+    // Controls
+    // Movement: W,A,S,D,Crtl,Space
+    // To change renderers at runtime:
+    // X: forward
+    // C: deferred
+    // V: deferred with deferred decals
+    // B: visibility buffer
+
+    // To enable/disable features:
+    // 1,2,3...9,0
+
+    // Current configuration is displayed in title bar
+
+    // Move primary Light source / change intensity: Numpad
+
+    // Editor:
+    // Toggle On, Off: 0
+    // Toggle Decals, Lights, Camera speed: F
+    // Toggle Decal Type/Light intensity, Decal Layer/ Light R, Decal Weight/ Light G, Decal Size/ Light B: T
+    // Increas: Q
+    // Decreas: E
+
+
+
+    
 
     flags = 0;
 

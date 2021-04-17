@@ -5,6 +5,12 @@
 #include "VulkanUtils.h"
 
 
+
+// You may need to modify
+#define VULKAN_PATH "C:\\VulkanSDK\\1.2.141.2\\" // Path to Vulkan installation
+#define DEVICE_INDEX 0 // Device index of your Nvidia Graphics Card
+
+
 struct VulkanContext
 {
 	VkDevice m_device;
