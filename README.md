@@ -15,30 +15,30 @@ Step 3: In Visual Studio: Propties (Alt+Enter) -> C/C++ -> General -> Additional
 Step 4: In Visual Studio: Propties (Alt+Enter) -> Linker -> General -> Additional Include Directories: Change Path from "C:\VulkanSDK\1.2.141.2\Lib" -> "'your vulkan path'\Lib"
 
 Step 5: In VulkanContext.h, add correct VULKAN_PATH and DEVICE_INDEX of your Nvidia GPU.
-(device indices and names of all GPUs are printed to the command line, on startup of the renderer)
+(device indices and names of all GPUs are printed to the command line, on startup of the renderer)<br/>
 
 
-Renderer Controls:
-Movement: W,A,S,D,Crtl,Space
-To change renderers at runtime:
-X: forward
-C: deferred
-V: deferred with deferred decals
-B: visibility buffer
+Renderer Controls:<br/>
+Movement: W,A,S,D,Crtl,Space<br/>
+To change renderers at runtime:<br/>
+X: forward<br/>
+C: deferred<br/>
+V: deferred with deferred decals<br/>
+B: visibility buffer<br/>
 
-To enable/disable features:
-1,2,3...9,0
+To enable/disable features:<br/>
+1,2,3...9,0<br/>
 
-Current configuration is displayed in title bar
+Current configuration is displayed in title bar<br/>
 
-Move primary Light source / change intensity: Numpad
+Move primary Light source / change intensity: Numpad<br/>
 
-Editor:
-Toggle On, Off: 0
-Toggle Decals, Lights, Camera speed: F
-Toggle Decal Type/Light intensity, Decal Layer/ Light R, Decal Weight/ Light G, Decal Size/ Light B: T
-Increas: Q
-Decreas: E
+Editor:<br/>
+Toggle On, Off: 0<br/>
+Toggle Decals, Lights, Camera speed: F<br/>
+Toggle Decal Type/Light intensity, Decal Layer/ Light R, Decal Weight/ Light G, Decal Size/ Light B: T<br/>
+Increas: Q<br/>
+Decreas: E<br/>
 
 
 More detailed instructions to come...
